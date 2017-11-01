@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Kate Pozdnysheva](https://up.htmlacademy.ru/htmlcss/19/user/3558).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Попов](https://htmlacademy.ru/profile/id42761).
 
 ---
 
