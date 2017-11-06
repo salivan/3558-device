@@ -1,12 +1,389 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Девайс</title>
+</head>
 
-  </body>
+<body>
+  <header class="main-header">
+    <h1 class="logo">
+      Device
+    </h1>
+
+    <nav class="navigation">
+      <ul class="menu menu_user">
+        <li class="menu__item">
+          <input class="search" type="text" size="30" placeholder="Поиск по сайту">
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="login.html">
+            Войти
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="compare.html">
+            Сравнить
+          </a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="checkout.html">
+            Корзина
+          </a>
+        </li>
+      </ul>
+
+      <ul class="menu menu_main">
+        <li class="menu__item">
+          <a href="catalog.html">
+            Каталог товаров</a
+          ><button class="">+</button>
+        </li>
+        <li class="menu__item">
+          <a href="delivery.html">
+            Доставка
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="guarantee.html">
+            Гарантия
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="contacts.html">
+            Контанты
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!--Промо-блок-->
+    <section class="promo promo_show_selfie">
+      <ul class="promo__radio-group">
+        <li class="promo__radio">
+          <button class="promo__radio-button" data-value="selfie"></button>
+        </li>
+        <li class="promo__radio">
+          <button class="promo__radio-button" data-value="fitness"></button>
+        </li>
+        <li class="promo__radio">
+          <button class="promo__radio-button" data-value="copters"></button>
+        </li>
+      </ul>
+
+      <div class="promo__page promo__page_selfie layout layout_2col">
+        <div class="layout__col">
+          <img src="http://placehold.it/150x100" alt="" class="promo__img">
+        </div>
+        <div class="layout__col">
+          <h2 class="static-text__h2">
+            Делай селфи, как Бен Стиллер!
+          </h2>
+          <p class="static-text__p">
+            Самая длинная палка для селфи доступна в нашем магазине.
+            Восемь (Восемь, Карл) метров длиной и весом всего 5 килограмм.
+          </p>
+          <table class="static-text__table">
+            <tr>
+              <td class="static-text__td">8,5 м</td>
+              <td class="static-text__td">5 кг</td>
+              <td class="static-text__td">Карбон</td>
+            </tr>
+            <tr>
+              <th class="static-text__th">Длина палки</th>
+              <th class="static-text__th">Вес палки</th>
+              <th class="static-text__th">Материал</th>
+            </tr>
+          </table>
+          <a class="button button_link" href="monopods.html"></a>
+        </div>
+      </div>
+
+      <div class="promo__page promo__page_fitness layout layout_2col">
+        <div class="layout__col">
+          <img src="http://placehold.it/150x100" alt="" class="promo__img">
+        </div>
+        <div class="layout__col">
+          <h2 class="static-text__h2">
+            Худеем правильно
+          </h2>
+          <p class="static-text__p">
+            Мотивирующие фитнес-браслеты помогут найти в себе силы не пропустить
+            занятия и соблюдать диету.
+          </p>
+          <table class="static-text__table">
+            <tr>
+              <td class="static-text__td">48 часов</td>
+            </tr>
+            <tr>
+              <th class="static-text__th">Без подзарядки</th>
+            </tr>
+          </table>
+          <a class="button button_link" href="fitness.html"></a>
+        </div>
+      </div>
+
+      <div class="promo__page promo__page_copters layout layout_2col">
+        <div class="layout__col">
+          <img src="http://placehold.it/150x100" alt="" class="promo__img">
+        </div>
+        <div class="layout__col">
+          <h2 class="static-text__h2">
+            Порхает как бабочка, жалит как пчела!
+          </h2>
+          <p class="static-text__p">
+            Этот обычный, на первый взгляд, квадрокоптер оснащем мощным лазером,
+            замаскированным под страндартную камеру.
+          </p>
+          <table class="static-text__table">
+            <tr>
+              <td class="static-text__td">800 м</td>
+              <td class="static-text__td">50 м</td>
+            </tr>
+            <tr>
+              <th class="static-text__th">Дальность полета</th>
+              <th class="static-text__th">Радиус поражения</th>
+            </tr>
+          </table>
+          <a class="button button_link" href="copters.html"></a>
+        </div>
+      </div>
+    </section>
+
+    <!--Раздел "Каталон товаров". Фон+картинки добавятся через псевдоэлементы в css-->
+    <section class="catalog">
+      <h2 class="visually-hidden">Каталог товаров</h2>
+      <ul>
+        <li class="catalog__group">
+          <a href="vr.html" class="catalog__link catalog__link_vr">
+            Виртуальная реальность
+          </a>
+        </li>
+        <li class="catalog__group">
+          <a href="monopods.html" class="catalog__link catalog__link_monopods">
+           Моноподы для селфи
+          </a>
+        </li>
+        <li class="catalog__group">
+          <a href="cameras.html" class="catalog__link catalog__link_cameras">
+            Экшн-камеры
+          </a>
+        </li>
+        <li class="catalog__group">
+          <a href="fitness.html" class="catalog__link catalog__link_fitness">
+            Фитнес-браслеты
+          </a>
+        </li>
+        <li class="catalog__group">
+          <a href="smart-watches.html" class="catalog__link catalog__link_smart-watches">
+            Умные часы
+          </a>
+        </li>
+        <li class="catalog__group">
+          <a href="copters.html" class="catalog__link catalog__link_copters">
+            Квадрокоптеры
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!--Секция "сервисы"-->
+    <section class="services">
+      <h2 class="visually-hidden">Сервисы</h2>
+      <ul>
+        <li class="services__service services__service_current">
+          <button class="button button_link"></button>
+        </li>
+        <li class="services__service">
+          <button class="button button_link"></button>
+        </li>
+        <li class="services__service">
+          <button class="button button_link"></button>
+        </li>
+      </ul>
+
+      <div class="services__description static-text">
+        <h3 class="static-text__h3">
+          Доставка
+        </h3>
+        <p class="static-text__p">
+          Мы с удовольствием доставим ваш товар прямо
+          к вашему подъезду совершенно беслпатно! Ведь мы неплохо заработем,
+          поднимая его на ваш этаж.
+        </p>
+      </div>
+      <div class="services__description static-text">
+        <h3 class="static-text__h3">
+          Гарантия
+        </h3>
+        <p class="static-text__p">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="services__description static-text">
+        <h3 class="static-text__h3">
+          Кредит
+        </h3>
+        <p class="static-text__p">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+          mollit anim id est laborum.
+        </p>
+      </div>
+    </section>
+
+    <!--Секция "бренды"-->
+    <section class="brands">
+      <h2 class="visually-hidden">Бренды</h2>
+      <ul class="brands__logos">
+        <li class="brands__item">
+          <a class="brands__link">
+            <img src="http://placehold.it/100x100" alt="DJI">
+          </a>
+        </li>
+        <li class="brands__item">
+          <a class="brands__link">
+            <img src="http://placehold.it/100x100" alt="SP Gadgest">
+          </a>
+        </li>
+        <li class="brands__item">
+          <a class="brands__link">
+            <img src="http://placehold.it/100x100" alt="GoPro">
+          </a>
+        </li>
+        <li class="brands__item">
+          <a class="brands__link">
+            <img src="http://placehold.it/100x100" alt="Vive">
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!--Секция "О нас" и "Контакты"-->
+    <div class="layout layout_2col">
+      <section class="about-us static-text">
+        <h3 class="static-text__h3">
+          О нас
+        </h3>
+        <p class="static-text__p">
+          Огромный выбор гаджетов не оставит равнодушным гика,
+          который есть в каждом из нас.
+        </p>
+        <p class="static-text__p">
+          Мы можем доставить ваш товар в самые отдаленные точки России!
+          DEVICE работает со многими транспортными компаниями:
+        </p>
+        <ul class="static-text__ul">
+          <li class="static-text__li">
+            Деловые линии
+          </li>
+          <li class="static-text__li">
+            Автотрейдинг
+          </li>
+          <li class="static-text__li">
+            ЖелДорЭкспедиция
+          </li>
+        </ul>
+        <a class="button button_link" href="">
+          Подробнее о нас
+        </a>
+      </section>
+
+      <section class="contacts static-text">
+        <h3 class="static__h3">
+          Контакты
+        </h3>
+        <p>
+          Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
+          проверить работоспособность покупки. Всякое бывает.
+        </p>
+        <!--карта-->
+        <a class="button button_link" href="contacts.html">
+          Напишите нам
+        </a>
+      </section>
+    </div>
+  </main>
+
+  <!--Футер-->
+  <footer class="main-footer vcard">
+    <h3 class="logo organization-name">
+      Device
+    </h3>
+    <p class="adr">
+      <span class="locality">г. Москва</span>, ул. <span class="street-address">Строителей, 15</span>
+    </p>
+    <p>
+      <a href="tel:+74954959595" class="tel">Тел.: +7(495) 495-95-95</a>
+    </p>
+    <ul class="social">
+      <li class="social__icon">
+        <a class="url" href="https://www.facebook.com/device">
+          <img src="http://placehold.it/50x50" alt="facebook">
+        </a>
+      </li>
+      <li class="social__icon">
+        <a class="url" href="https://www.instagram.com/device">
+          <img src="http://placehold.it/50x50" alt="instagram">
+        </a>
+      </li>
+      <li class="social__icon">
+        <a class="url" href="https://twitter.com/device">
+          <img src="http://placehold.it/50x50" alt="twitter">
+        </a>
+      </li>
+    </ul>
+    <ul class="menu menu_footer">
+      <li class="menu__item">
+        <a href="delivery.html">
+          Доставка
+        </a>
+      </li>
+      <li class="menu__item">
+        <a href="guarantee.html">
+          Гарантия
+        </a>
+      </li>
+      <li class="menu__item">
+        <a href="contacts.html">
+          Контанты
+        </a>
+      </li>
+    </ul>
+    <ul class="menu menu_user">
+      <li class="menu__item">
+        <a class="menu__link" href="login.html">
+          Войти
+        </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="compare.html">
+          Сравнить
+        </a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="checkout.html">
+          Корзина
+        </a>
+      </li>
+    </ul>
+    <p class="copyright">
+      <a href="https://htmlacademy.ru">
+        <img src="http://placehold.it/50x50" alt="HTML Academy">
+      </a>
+    </p>
+  </footer>
+</body>
+
 </html>
