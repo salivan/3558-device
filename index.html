@@ -8,26 +8,47 @@
   <body>
     <header class="main-header">
       <h1 class="logo">
-        Device
+        <svg class="logo__image" xmlns="http://www.w3.org/2000/svg" width="163" height="36">
+          <path fill-rule="evenodd" d="M162.692 27.848v7.392h-21.12V1.64h20.88v7.392h-13.2V14.6h12v7.296h-12v5.952h13.44zm-39.6.576c1.696 0 3.24-.367 4.632-1.104 1.392-.736 2.44-1.744 3.144-3.024l6.624 3.84c-1.44 2.4-3.44 4.296-6 5.688-2.56 1.392-5.36 2.088-8.4 2.088-5.024 0-9.192-1.672-12.504-5.016-3.312-3.343-4.968-7.495-4.968-12.456 0-4.96 1.656-9.112 4.968-12.456 3.312-3.343 7.48-5.016 12.504-5.016 3.008 0 5.792.696 8.352 2.088 2.56 1.392 4.576 3.288 6.048 5.688l-6.624 3.84c-.736-1.312-1.792-2.328-3.168-3.048-1.376-.72-2.912-1.08-4.608-1.08-2.976 0-5.352.912-7.128 2.736-1.776 1.824-2.664 4.241-2.664 7.248 0 3.008.888 5.424 2.664 7.248 1.776 1.824 4.152 2.736 7.128 2.736zM93.141 1.64h7.68v33.6h-7.68V1.64zm-24.096 33.6L58.101 1.64h8.4l7.44 24.72 7.44-24.72h8.4l-10.944 33.6h-9.792zM35.061 1.64h20.88v7.392h-13.2V14.6h12v7.296h-12v5.952h13.44v7.392h-21.12V1.64zm-21.119 33.6H.502V1.64h13.44c4.639 0 8.52 1.608 11.64 4.824 3.12 3.216 4.68 7.208 4.68 11.976 0 4.769-1.56 8.76-4.68 11.976-3.12 3.216-7.001 4.824-11.64 4.824zm6.456-23.64c-1.649-1.711-3.801-2.568-6.456-2.568h-5.76v18.816h5.76c2.655 0 4.807-.856 6.456-2.568 1.647-1.711 2.472-3.991 2.472-6.84 0-2.848-.825-5.128-2.472-6.84z"
+          />
+        </svg>
       </h1>
 
       <nav class="navigation">
         <ul class="menu menu_user">
           <li class="menu__item">
-            <input class="search" type="text" size="30" placeholder="Поиск по сайту">
+            <form class="search" action="">
+              <input class="search__text" type="text" placeholder="Поиск по сайту">
+              <button class="search__button" type="submit">
+                Найти
+              </button>
+            </form>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="login.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
+                <path d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543 1.008-.611 1.687-1.707 1.687-2.972C9.985 1.561 8.425 0 6.5 0S3.015 1.561 3.015 3.485c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"
+                />
+              </svg>
               Войти
             </a>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="compare.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                <path d="M8 2h1.984v8H8zM0 3h1.984v7H0zm4-3h2v10H4z" />
+              </svg>
               Сравнить
             </a>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="checkout.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                <path d="M11.864 3.017c-.082-.098-.203-.154-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.91V4.09c0 .563-.486 1.022-1.08 1.022-.596 0-1.08-.458-1.08-1.022V2.863H.44c-.125 0-.243.056-.327.154-.082.098-.122.228-.107.358L.78 10.51c.014.805.64 1.454 1.41 1.454h7.595c.77 0 1.396-.65 1.41-1.455l.777-7.136c.015-.13-.026-.26-.108-.358z"
+                />
+                <path d="M3.83 4.5c.238 0 .432-.185.432-.41V1.84c0-.632.672-1.022 1.295-1.022h1.08c.654 0 1.077.4 1.077 1.022v2.25c0 .225.194.41.43.41.24 0 .434-.185.434-.41V1.84C8.578.773 7.76 0 6.636 0h-1.08C4.366 0 3.4.826 3.4 1.84v2.25c0 .225.194.41.43.41z"
+                />
+              </svg>
               Корзина
             </a>
           </li>
@@ -35,22 +56,53 @@
 
         <ul class="menu menu_main">
           <li class="menu__item">
-            <a href="catalog.html">
-              Каталог товаров</a
-            ><button class="">+</button>
+            <a class="menu__link" href="catalog.html">
+              Каталог товаров
+            </a>
+            <ul class="menu">
+              <li class="menu__item">
+                <a href="" class="menu__link">
+                </a>
+                </li>
+              <li class="menu__item">
+                <a href="" class="menu__link">
+                </a>
+                </li>
+              <li class="menu__item">
+                <a href="" class="menu__link">
+                </a>
+                </li>
+            </ul>
+            <ul class="menu">
+              <li class="menu__item">
+                <a href="" class="menu__link">
+                </a>
+                </li>
+              <li class="menu__item">
+                <a href="" class="menu__link">
+                </a>
+                </li>
+
+            </ul>
+            <ul class="menu">
+              <li class="menu__item">
+                <a href="" class="menu__link">
+                </a>
+                </li>
+            </ul>
           </li>
           <li class="menu__item">
-            <a href="delivery.html">
+            <a class="menu__link" href="delivery.html">
               Доставка
             </a>
           </li>
           <li class="menu__item">
-            <a href="guarantee.html">
+            <a class="menu__link" href="guarantee.html">
               Гарантия
             </a>
           </li>
           <li class="menu__item">
-            <a href="contacts.html">
+            <a class="menu__link" href="contacts.html">
               Контакты
             </a>
           </li>
@@ -76,7 +128,7 @@
 
         <div class="promo__page promo__page_selfie layout layout_2col">
           <div class="layout__col">
-            <img src="http://placehold.it/150x100" alt="" class="promo__img">
+            <img src="img/ill_selfie.png" width="535" height="502" alt="Монопод" class="promo__img">
           </div>
           <div class="layout__col">
             <h3 class="static-text__h2">
@@ -104,7 +156,7 @@
 
         <div class="promo__page promo__page_fitness layout layout_2col">
           <div class="layout__col">
-            <img src="http://placehold.it/150x100" alt="" class="promo__img">
+            <img src="img/ill_fitness.png" width="535" height="502" alt="Фитнес-браслет" class="promo__img">
           </div>
           <div class="layout__col">
             <h3 class="static-text__h2">
@@ -128,7 +180,7 @@
 
         <div class="promo__page promo__page_copters layout layout_2col">
           <div class="layout__col">
-            <img src="http://placehold.it/150x100" alt="" class="promo__img">
+            <img src="img/ill_copter.png" width="535" height="502" alt="Квадрокоптер" class="promo__img">
           </div>
           <div class="layout__col">
             <h3 class="static-text__h2">
@@ -195,13 +247,13 @@
         <h2 class="visually-hidden">Сервисы</h2>
         <ul>
           <li class="services__service services__service_current">
-            <button class="button button_link"></button>
+            <button class="button button_button"></button>
           </li>
           <li class="services__service">
-            <button class="button button_link"></button>
+            <button class="button button_button"></button>
           </li>
           <li class="services__service">
-            <button class="button button_link"></button>
+            <button class="button button_button"></button>
           </li>
         </ul>
 
@@ -249,22 +301,22 @@
         <ul class="brands__logos">
           <li class="brands__item">
             <a class="brands__link">
-              <img src="http://placehold.it/100x100" alt="DJI">
+              <img src="img/logo-1.png" width="260" height="100" alt="DJI">
             </a>
           </li>
           <li class="brands__item">
             <a class="brands__link">
-              <img src="http://placehold.it/100x100" alt="SP Gadgest">
+              <img src="img/logo-2.png" width="260" height="100" alt="SP Gadgest">
             </a>
           </li>
           <li class="brands__item">
             <a class="brands__link">
-              <img src="http://placehold.it/100x100" alt="GoPro">
+              <img src="img/logo-3.png" width="260" height="100" alt="GoPro">
             </a>
           </li>
           <li class="brands__item">
             <a class="brands__link">
-              <img src="http://placehold.it/100x100" alt="Vive">
+              <img src="img/logo-4.png" width="260" height="100" alt="Vive">
             </a>
           </li>
         </ul>
@@ -319,7 +371,10 @@
     <!--Футер-->
     <footer class="main-footer vcard">
       <h2 class="logo organization-name">
-        Device
+        <svg class="logo__image" xmlns="http://www.w3.org/2000/svg" width="163" height="36">
+          <path fill-rule="evenodd" d="M162.692 27.848v7.392h-21.12V1.64h20.88v7.392h-13.2V14.6h12v7.296h-12v5.952h13.44zm-39.6.576c1.696 0 3.24-.367 4.632-1.104 1.392-.736 2.44-1.744 3.144-3.024l6.624 3.84c-1.44 2.4-3.44 4.296-6 5.688-2.56 1.392-5.36 2.088-8.4 2.088-5.024 0-9.192-1.672-12.504-5.016-3.312-3.343-4.968-7.495-4.968-12.456 0-4.96 1.656-9.112 4.968-12.456 3.312-3.343 7.48-5.016 12.504-5.016 3.008 0 5.792.696 8.352 2.088 2.56 1.392 4.576 3.288 6.048 5.688l-6.624 3.84c-.736-1.312-1.792-2.328-3.168-3.048-1.376-.72-2.912-1.08-4.608-1.08-2.976 0-5.352.912-7.128 2.736-1.776 1.824-2.664 4.241-2.664 7.248 0 3.008.888 5.424 2.664 7.248 1.776 1.824 4.152 2.736 7.128 2.736zM93.141 1.64h7.68v33.6h-7.68V1.64zm-24.096 33.6L58.101 1.64h8.4l7.44 24.72 7.44-24.72h8.4l-10.944 33.6h-9.792zM35.061 1.64h20.88v7.392h-13.2V14.6h12v7.296h-12v5.952h13.44v7.392h-21.12V1.64zm-21.119 33.6H.502V1.64h13.44c4.639 0 8.52 1.608 11.64 4.824 3.12 3.216 4.68 7.208 4.68 11.976 0 4.769-1.56 8.76-4.68 11.976-3.12 3.216-7.001 4.824-11.64 4.824zm6.456-23.64c-1.649-1.711-3.801-2.568-6.456-2.568h-5.76v18.816h5.76c2.655 0 4.807-.856 6.456-2.568 1.647-1.711 2.472-3.991 2.472-6.84 0-2.848-.825-5.128-2.472-6.84z"
+          />
+        </svg>
       </h2>
       <p class="adr">
         <span class="locality">г. Москва</span>, ул. <span class="street-address">Строителей, 15</span>
@@ -330,17 +385,20 @@
       <ul class="social">
         <li class="social__icon">
           <a class="url" href="https://www.facebook.com/device">
-            <img src="http://placehold.it/50x50" alt="facebook">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4gIDxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0xNiAwQzcuMTY0IDAgMCA3LjE2MyAwIDE2czcuMTY0IDE2IDE2IDE2YzguODM3IDAgMTYtNy4xNjQgMTYtMTZTMjQuODM3IDAgMTYgMHptNC4wNjIgOS40NTVoLTMuMDJWMTIuOWgzLjAydjMuNDQ0aC0zLjAydjguNjFIMTQuMDJ2LTguNjFIMTFWMTIuOWgzLjAyVjkuNDU0YzAtMS45MDIgMS4zNTQtMy40NDUgMy4wMjItMy40NDVoMy4wMnYzLjQ0NHoiLz48L3N2Zz4="
+              alt="facebook">
           </a>
         </li>
         <li class="social__icon">
           <a class="url" href="https://www.instagram.com/device">
-            <img src="http://placehold.it/50x50" alt="instagram">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4gIDxnIGZpbGw9IiNGRkYiPiAgICA8cGF0aCBkPSJNMjAuOTE2IDE2YzAgMi43MjgtMi4yMSA0LjkzOC00LjkzOCA0LjkzOHMtNC45NC0yLjIxLTQuOTQtNC45MzhjMC0uMzk0LjA1Mi0uNzczLjE0LTEuMTRoLS44OTh2Ni44MzhoMTEuMzk2VjE0Ljg2aC0uODk3Yy4wODMuMzY3LjEzNC43NDYuMTM0IDEuMTR6Ii8+ICAgIDxwYXRoIGQ9Ik0xNS45NzggMTguNjZjMS40NjYgMCAyLjY2LTEuMTk0IDIuNjYtMi42NnMtMS4xOTQtMi42Ni0yLjY2LTIuNjZjLTEuNDY2IDAtMi42NiAxLjE5NC0yLjY2IDIuNjZzMS4xOTMgMi42NiAyLjY2IDIuNjZ6bTIuNjYtOC4zNThoMy4wNHYzLjA0aC0zLjA0eiIvPiAgICA8cGF0aCBkPSJNMTYgMEM3LjE2NCAwIDAgNy4xNjQgMCAxNmMwIDguODM3IDcuMTY0IDE2IDE2IDE2IDguODM3IDAgMTYtNy4xNjMgMTYtMTYgMC04LjgzNi03LjE2My0xNi0xNi0xNnptNy45NTUgMjEuNjk4YzAgMS4yNTQtMS4wMjUgMi4yOC0yLjI4IDIuMjhIMTAuMjhjLTEuMjU0IDAtMi4yOC0xLjAyNi0yLjI4LTIuMjhWMTAuMzAyYzAtMS4yNTMgMS4wMjYtMi4yOCAyLjI4LTIuMjhoMTEuMzk1YzEuMjU0IDAgMi4yOCAxLjAyNyAyLjI4IDIuMjh2MTEuMzk2eiIvPiAgPC9nPjwvc3ZnPg=="
+              alt="instagram">
           </a>
         </li>
         <li class="social__icon">
           <a class="url" href="https://twitter.com/device">
-            <img src="http://placehold.it/50x50" alt="twitter">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4gIDxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0xNiAwQzcuMTY0IDAgMCA3LjE2NCAwIDE2YzAgOC44MzcgNy4xNjQgMTYgMTYgMTYgOC44MzcgMCAxNi03LjE2MyAxNi0xNiAwLTguODM2LTcuMTYzLTE2LTE2LTE2em03Ljk0NCAxMi44MWMtLjI1IDYuNTE1LTMuNDYzIDEwLjgzLTEwLjk5MiAxMC43aC0uNDg3Yy0uNDQ3IDAtNC41NDMtLjQ0Mi01LjM0NC0xLjgyMiAyLjQ4LjE5IDQuMjUtLjQwNiA1LjEyLTEuMTM2LTEuMDQ1LS4yOS0yLjkyLS40Ni0zLjI1LTIuODQ4LjM4Ni4xMDQuNjIuMjIgMS4zLjExMy0xLjMwNi0uODI0LTIuNzYtMS41Mi0yLjY4LTMuNjQzLjMxLjMxNyAxLjE2Ni41MTggMS40Ni40NTctLjc2Ni0uMjMtMi4xNS0zLjI0LS45NzItNC43OCAxLjk4NCAxLjc5IDQuMDc1IDMuNDg1IDcuODA0IDMuNjQ2LjIzLTIuMjE0IDEuMjQtMy43IDMuMTctNC4zMjUgMS44NC0uNDggMy4yNTUuMjYgMy45IDEuMTM4LjczOC0uMjI0IDEuNDU0LS40NjYgMi4xOTQtLjY4NS0uMDA0LjgzNC0uNTcgMS40NjQtLjkzNSAxLjcxLjc0Ny4xNjUgMS40MjMtLjQ3NSAxLjQyMy0uNDc1LS4xODIuOTYzLTEuMDkyIDEuNzI1LTEuNzA1IDEuOTU0eiIvPjwvc3ZnPg=="
+              alt="twitter">
           </a>
         </li>
       </ul>
@@ -364,25 +422,84 @@
       <ul class="menu menu_user">
         <li class="menu__item">
           <a class="menu__link" href="login.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
+              <path d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543 1.008-.611 1.687-1.707 1.687-2.972C9.985 1.561 8.425 0 6.5 0S3.015 1.561 3.015 3.485c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"
+              />
+            </svg>
             Войти
           </a>
         </li>
         <li class="menu__item">
           <a class="menu__link" href="compare.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+              <path d="M8 2h1.984v8H8zM0 3h1.984v7H0zm4-3h2v10H4z" />
+            </svg>
             Сравнить
           </a>
         </li>
         <li class="menu__item">
           <a class="menu__link" href="checkout.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+              <path d="M11.864 3.017c-.082-.098-.203-.154-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.91V4.09c0 .563-.486 1.022-1.08 1.022-.596 0-1.08-.458-1.08-1.022V2.863H.44c-.125 0-.243.056-.327.154-.082.098-.122.228-.107.358L.78 10.51c.014.805.64 1.454 1.41 1.454h7.595c.77 0 1.396-.65 1.41-1.455l.777-7.136c.015-.13-.026-.26-.108-.358z"
+              />
+              <path d="M3.83 4.5c.238 0 .432-.185.432-.41V1.84c0-.632.672-1.022 1.295-1.022h1.08c.654 0 1.077.4 1.077 1.022v2.25c0 .225.194.41.43.41.24 0 .434-.185.434-.41V1.84C8.578.773 7.76 0 6.636 0h-1.08C4.366 0 3.4.826 3.4 1.84v2.25c0 .225.194.41.43.41z"
+              />
+            </svg>
             Корзина
           </a>
         </li>
       </ul>
       <p class="copyright">
         <a href="https://htmlacademy.ru">
-          <img src="http://placehold.it/50x50" alt="HTML Academy">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26.943" height="34.09" viewBox="0 0 26.943 34.09">
+            <path d="M13.62.017L13.472 0 0 1.412v24.66l13.473 8.018 13.43-7.99.042-.025V1.412L13.62.017zm11.4 12.11L13.494 5.334V5.23l-.088.05-.088-.056v.11L1.924 12.117v-8.97l11.548-1.213L25.02 3.147v8.98zm-11.615-5.34L24.923 13.5l-4.48 2.64-7.092-4.22-.01 1.414 5.904 3.513-.86.507-5.03-2.992-.013 1.415 3.827 2.275-.782.523-3.03-1.787-.015 1.413 1.85 1.095-1.8 1.08-11.355-6.75 11.37-6.835zm-11.48 8.34l11.41 6.79.017 1.045-7.942-4.728-.015 1.416 7.98 4.795.017 1.076-7.973-4.74-.017 1.418 8.02 4.822.047.024 8.144-4.872-.01-5.176 3.414-2.036v10.02L13.47 31.85 1.925 24.98v-9.853z"
+            />
+          </svg>
         </a>
       </p>
     </footer>
+
+
+
+    <div class="popup">
+      <button class="popup__close">
+        <span class="visually-hidden">✕</span>
+      </button>
+      <div class="contact-form">
+        <div class="contact-form__line">
+          <div class="contact-form__col">
+            <span class="input">
+              <label for="" class="input__label">Ваше имя</label>
+              <input type="text" class="input__input" placeholder="Представьтесь, пожалуйста">
+            </span>
+          </div>
+          <div class="contact-form__col">
+            <span class="input">
+              <label for="" class="input__label">Ваш e-mail</label>
+              <input type="text" class="input__input" placeholder="Для отправки ответа">
+            </span>
+          </div>
+        </div>
+        <div class="contact-form__line">
+          <span class="input">
+            <label for="" class="input__label">Ваш e-mail</label>
+            <textarea rows="3" cols="8" type="text" class="input__textearea" placeholder="В свободной форме"></textarea>
+          </span>
+        </div>
+        <div class="contact-form__line">
+          <button class="button button_button">Отправить</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup">
+      <button class="popup__close">
+        <span class="visually-hidden">✕</span>
+      </button>
+      <div class="map">
+        <img class="map__static" src="img/map_small.png" alt="г.Москва Строителей, 15">
+        <div class="map__api"></div>
+      </div>
+    </div>
   </body>
 </html>
