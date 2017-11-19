@@ -1,3 +1,4 @@
+
 /*
   zoom
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4gIDxwYXRoIGQ9Ik0xNS43IDE0LjNsLTMuMTA0LTMuMTA0QzEzLjQ3MyAxMC4wMjMgMTQgOC41NzYgMTQgN2MwLTMuODY2LTMuMTM0LTctNy03UzAgMy4xMzQgMCA3czMuMTM0IDcgNyA3YzEuNTc2IDAgMy4wMjMtLjUyNyA0LjE5My0xLjQwNEwxNC4zIDE1LjdjLjE4NS4xODQuMzguMy43LjMuNTUzIDAgMS0uNDQ3IDEtMSAwLS4yMTktLjA1NS0uNDU0LS4zLS43ek0yIDdjMC0yLjc2MiAyLjIzOC01IDUtNXM1IDIuMjM4IDUgNS0yLjIzOCA1LTUgNS01LTIuMjM4LTUtNXoiLz48L3N2Zz4=);
@@ -42,9 +43,40 @@
 
   naw-arrow
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjciIHZpZXdCb3g9IjAgMCA0IDciPiAgPHBhdGggZD0iTTMuODMgMy4xMzJMLjg2LjE0NGMtLjE5Ni0uMi0uNTE1LS4yLS43MTIgMC0uMTk4LjItLjE5OC41MiAwIC43MThsMi42MSAyLjYzTC4xNSA2LjEyYy0uMTk4LjItLjE5OC41MiAwIC43Mi4wOTguMS4yMjguMTQ4LjM1Ni4xNDguMTMgMCAuMjYtLjA1LjM1Ny0uMTQ4bDIuOTctMi45ODhjLjA5OC0uMS4xNDctLjIzLjE0Ny0uMzYgMC0uMTMtLjA1LS4yNi0uMTQ3LS4zNnoiLz48L3N2Zz4=);
+*/
 
-  */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=cyrillic');
 
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Gilroy'), url(../fonts/gilroyextrabold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Gilroy'), url(../fonts/gilroylight.woff2) format('woff2');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 300 15px/2 "Open Sans", Arial, sans-serif;
+  color: #000;
+  background-color: #fff;
+}
+li {
+ list-style-type: none;
+}
+:link {
+  text-decoration: none;
+}
+.visually-hidden {
+  display: none;
+}
 
 
 
