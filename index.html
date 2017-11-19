@@ -3,21 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
     <header class="main-header">
-      <h1 class="logo">
+      <a class="logo">
         <svg class="logo__image" xmlns="http://www.w3.org/2000/svg" width="163" height="36">
           <path fill-rule="evenodd" d="M162.692 27.848v7.392h-21.12V1.64h20.88v7.392h-13.2V14.6h12v7.296h-12v5.952h13.44zm-39.6.576c1.696 0 3.24-.367 4.632-1.104 1.392-.736 2.44-1.744 3.144-3.024l6.624 3.84c-1.44 2.4-3.44 4.296-6 5.688-2.56 1.392-5.36 2.088-8.4 2.088-5.024 0-9.192-1.672-12.504-5.016-3.312-3.343-4.968-7.495-4.968-12.456 0-4.96 1.656-9.112 4.968-12.456 3.312-3.343 7.48-5.016 12.504-5.016 3.008 0 5.792.696 8.352 2.088 2.56 1.392 4.576 3.288 6.048 5.688l-6.624 3.84c-.736-1.312-1.792-2.328-3.168-3.048-1.376-.72-2.912-1.08-4.608-1.08-2.976 0-5.352.912-7.128 2.736-1.776 1.824-2.664 4.241-2.664 7.248 0 3.008.888 5.424 2.664 7.248 1.776 1.824 4.152 2.736 7.128 2.736zM93.141 1.64h7.68v33.6h-7.68V1.64zm-24.096 33.6L58.101 1.64h8.4l7.44 24.72 7.44-24.72h8.4l-10.944 33.6h-9.792zM35.061 1.64h20.88v7.392h-13.2V14.6h12v7.296h-12v5.952h13.44v7.392h-21.12V1.64zm-21.119 33.6H.502V1.64h13.44c4.639 0 8.52 1.608 11.64 4.824 3.12 3.216 4.68 7.208 4.68 11.976 0 4.769-1.56 8.76-4.68 11.976-3.12 3.216-7.001 4.824-11.64 4.824zm6.456-23.64c-1.649-1.711-3.801-2.568-6.456-2.568h-5.76v18.816h5.76c2.655 0 4.807-.856 6.456-2.568 1.647-1.711 2.472-3.991 2.472-6.84 0-2.848-.825-5.128-2.472-6.84z"
           />
         </svg>
-      </h1>
-
+      </a>
       <nav class="navigation">
         <ul class="menu menu_user">
           <li class="menu__item">
-            <form class="search" action="">
+            <form class="search" action="get">
               <input class="search__text" type="text" placeholder="Поиск по сайту">
               <button class="search__button" type="submit">
                 Найти
@@ -116,9 +117,11 @@
     </header>
 
     <main>
-      <!--Промо-блок-->
-      <h2 class="visually-hidden">Промо-блок</h2>
+      <h1 class="visually-hidden">Сайт магазина Device</h1>
+
+      <!--Раздел "Промо-блок"-->
       <section class="promo promo_show_selfie">
+        <h2 class="visually-hidden">Промо-блок</h2>
         <ul class="promo__radio-group">
           <li class="promo__radio">
             <button class="promo__radio-button" data-value="selfie"></button>
@@ -136,12 +139,11 @@
             <img src="img/ill_selfie.png" width="535" height="502" alt="Монопод" class="promo__img">
           </div>
           <div class="layout__col">
-            <h3 class="static-text__h2">
+            <h3 class="static-text__h3">
               Делай селфи, как Бен Стиллер!
             </h3>
             <p class="static-text__p">
-              Самая длинная палка для селфи доступна в нашем магазине.
-              Восемь (Восемь, Карл) метров длиной и весом всего 5 килограмм.
+              Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл) метров длиной и весом всего 5 килограмм.
             </p>
             <table class="static-text__table">
               <tr>
@@ -155,7 +157,7 @@
                 <th class="static-text__th">Материал</th>
               </tr>
             </table>
-            <a class="button button_link" href="monopods.html"></a>
+            <a class="button button_link" href="monopods.html">Подробнее</a>
           </div>
         </div>
 
@@ -164,12 +166,11 @@
             <img src="img/ill_fitness.png" width="535" height="502" alt="Фитнес-браслет" class="promo__img">
           </div>
           <div class="layout__col">
-            <h3 class="static-text__h2">
+            <h3 class="static-text__h3">
               Худеем правильно
             </h3>
             <p class="static-text__p">
-              Мотивирующие фитнес-браслеты помогут найти в себе силы не пропустить
-              занятия и соблюдать диету.
+              Мотивирующие фитнес-браслеты помогут найти в себе силы не пропустить занятия и соблюдать диету.
             </p>
             <table class="static-text__table">
               <tr>
@@ -179,7 +180,7 @@
                 <th class="static-text__th">Без подзарядки</th>
               </tr>
             </table>
-            <a class="button button_link" href="fitness.html"></a>
+            <a class="button button_link" href="fitness.html">Подробнее</a>
           </div>
         </div>
 
@@ -188,12 +189,11 @@
             <img src="img/ill_copter.png" width="535" height="502" alt="Квадрокоптер" class="promo__img">
           </div>
           <div class="layout__col">
-            <h3 class="static-text__h2">
+            <h3 class="static-text__h3">
               Порхает как бабочка, жалит как пчела!
             </h3>
             <p class="static-text__p">
-              Этот обычный, на первый взгляд, квадрокоптер оснащем мощным лазером,
-              замаскированным под страндартную камеру.
+              Этот обычный, на первый взгляд, квадрокоптер оснащем мощным лазером, замаскированным под страндартную камеру.
             </p>
             <table class="static-text__table">
               <tr>
@@ -205,12 +205,12 @@
                 <th class="static-text__th">Радиус поражения</th>
               </tr>
             </table>
-            <a class="button button_link" href="copters.html"></a>
+            <a class="button button_link" href="copters.html">Подробнее</a>
           </div>
         </div>
       </section>
 
-      <!--Раздел "Каталон товаров". Фон+картинки добавятся через псевдоэлементы в css-->
+      <!--Раздел "Каталон товаров". Фон+картинки добавятся через псевдоэлементы в CSS-->
       <section class="catalog">
         <h2 class="visually-hidden">Каталог товаров</h2>
         <ul>
@@ -249,58 +249,46 @@
 
       <!--Секция "сервисы"-->
       <section class="services">
-        <h2 class="visually-hidden">Сервисы</h2>
+        <h3 class="visually-hidden">Сервисы</h3>
         <ul>
           <li class="services__service services__service_current">
-            <button class="button button_button"></button>
+            <button class="button button_button">Доставка</button>
           </li>
           <li class="services__service">
-            <button class="button button_button"></button>
+            <button class="button button_button">Гарантия</button>
           </li>
           <li class="services__service">
-            <button class="button button_button"></button>
+            <button class="button button_button">Кредит</button>
           </li>
         </ul>
 
         <div class="services__description static-text">
-          <h4 class="static-text__h3">
+          <h4 class="static-text__h4">
             Доставка
           </h4>
           <p class="static-text__p">
-            Мы с удовольствием доставим ваш товар прямо
-            к вашему подъезду совершенно беслпатно! Ведь мы неплохо заработем,
-            поднимая его на ваш этаж.
+            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно беслпатно! Ведь мы неплохо заработем, поднимая его на ваш этаж.
           </p>
         </div>
         <div class="services__description static-text">
-          <h4 class="static-text__h3">
+          <h4 class="static-text__h4">
             Гарантия
           </h4>
           <p class="static-text__p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.
           </p>
         </div>
         <div class="services__description static-text">
-          <h4 class="static-text__h3">
+          <h4 class="static-text__h4">
             Кредит
           </h4>
           <p class="static-text__p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-            mollit anim id est laborum.
+            Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка разумеется.
           </p>
         </div>
       </section>
 
-      <!--Секция "бренды"-->
+      <!--Секция "Бренды"-->
       <section class="brands">
         <h2 class="visually-hidden">Бренды</h2>
         <ul class="brands__logos">
@@ -330,16 +318,14 @@
       <!--Секция "О нас" и "Контакты"-->
       <div class="layout layout_2col">
         <section class="about-us static-text">
-          <h4 class="static-text__h3">
+          <h4 class="static-text__h4">
             О нас
           </h4>
           <p class="static-text__p">
-            Огромный выбор гаджетов не оставит равнодушным гика,
-            который есть в каждом из нас.
+            Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
           </p>
           <p class="static-text__p">
-            Мы можем доставить ваш товар в самые отдаленные точки России!
-            DEVICE работает со многими транспортными компаниями:
+            Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
           </p>
           <ul class="static-text__ul">
             <li class="static-text__li">
@@ -352,20 +338,22 @@
               ЖелДорЭкспедиция
             </li>
           </ul>
-          <a class="button button_link" href="">
+          <a class="button button_link" href="about.html">
             Подробнее о нас
           </a>
         </section>
 
         <section class="contacts static-text">
-          <h4 class="static__h3">
+          <h4 class="static__h4">
             Контакты
           </h4>
           <p>
-            Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
-            проверить работоспособность покупки. Всякое бывает.
+            Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
           </p>
-          <!--карта-->
+          <div class="map">
+            <img class="map__static" src="img/map_small.png" alt="г.Москва Строителей, 15">
+            <div class="map__api"></div>
+          </div>
           <a class="button button_link" href="contacts.html">
             Напишите нам
           </a>
@@ -375,12 +363,12 @@
 
     <!--Футер-->
     <footer class="main-footer vcard">
-      <h2 class="logo organization-name">
+      <a class="logo organization-name">
         <svg class="logo__image" xmlns="http://www.w3.org/2000/svg" width="163" height="36">
           <path fill-rule="evenodd" d="M162.692 27.848v7.392h-21.12V1.64h20.88v7.392h-13.2V14.6h12v7.296h-12v5.952h13.44zm-39.6.576c1.696 0 3.24-.367 4.632-1.104 1.392-.736 2.44-1.744 3.144-3.024l6.624 3.84c-1.44 2.4-3.44 4.296-6 5.688-2.56 1.392-5.36 2.088-8.4 2.088-5.024 0-9.192-1.672-12.504-5.016-3.312-3.343-4.968-7.495-4.968-12.456 0-4.96 1.656-9.112 4.968-12.456 3.312-3.343 7.48-5.016 12.504-5.016 3.008 0 5.792.696 8.352 2.088 2.56 1.392 4.576 3.288 6.048 5.688l-6.624 3.84c-.736-1.312-1.792-2.328-3.168-3.048-1.376-.72-2.912-1.08-4.608-1.08-2.976 0-5.352.912-7.128 2.736-1.776 1.824-2.664 4.241-2.664 7.248 0 3.008.888 5.424 2.664 7.248 1.776 1.824 4.152 2.736 7.128 2.736zM93.141 1.64h7.68v33.6h-7.68V1.64zm-24.096 33.6L58.101 1.64h8.4l7.44 24.72 7.44-24.72h8.4l-10.944 33.6h-9.792zM35.061 1.64h20.88v7.392h-13.2V14.6h12v7.296h-12v5.952h13.44v7.392h-21.12V1.64zm-21.119 33.6H.502V1.64h13.44c4.639 0 8.52 1.608 11.64 4.824 3.12 3.216 4.68 7.208 4.68 11.976 0 4.769-1.56 8.76-4.68 11.976-3.12 3.216-7.001 4.824-11.64 4.824zm6.456-23.64c-1.649-1.711-3.801-2.568-6.456-2.568h-5.76v18.816h5.76c2.655 0 4.807-.856 6.456-2.568 1.647-1.711 2.472-3.991 2.472-6.84 0-2.848-.825-5.128-2.472-6.84z"
           />
         </svg>
-      </h2>
+      </a>
       <p class="adr">
         <span class="locality">г. Москва</span>, ул. <span class="street-address">Строителей, 15</span>
       </p>
@@ -467,31 +455,29 @@
       <button class="popup__close">
         <span class="visually-hidden">✕</span>
       </button>
-      <div class="contact-form">
-        <div class="contact-form__line">
-          <div class="contact-form__col">
-            <span class="input">
-              <label for="" class="input__label">Ваше имя</label>
-              <input type="text" class="input__input" placeholder="Представьтесь, пожалуйста">
-            </span>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <div class="contact-form">
+          <div class="contact-form__line">
+            <div class="contact-form__col">
+                <label for="name" class="contact-form__label">Ваше имя</label>
+                <input id="name" type="text" class="contact-form__input" placeholder="Представьтесь, пожалуйста">
+            </div>
+            <div class="contact-form__col">
+                <label for="e-mail" class="contact-form__label">Ваш e-mail</label>
+                <input id="e-mail" type="text"  class="contact-form__input" placeholder="Для отправки ответа">
+            </div>
           </div>
-          <div class="contact-form__col">
-            <span class="input">
-              <label for="" class="input__label">Ваш e-mail</label>
-              <input type="text" class="input__input" placeholder="Для отправки ответа">
-            </span>
+          <div class="contact-form__line">
+            <div class="input">
+              <label for="text-message" class="input__label">Ваш e-mail</label>
+              <textarea id="text-message" rows="3" cols="8" class="input__textearea" placeholder="В свободной форме"></textarea>
+            </div>
+          </div>
+          <div class="contact-form__line">
+            <button class="button button_button" type="submit">Отправить</button>
           </div>
         </div>
-        <div class="contact-form__line">
-          <span class="input">
-            <label for="" class="input__label">Ваш e-mail</label>
-            <textarea rows="3" cols="8" type="text" class="input__textearea" placeholder="В свободной форме"></textarea>
-          </span>
-        </div>
-        <div class="contact-form__line">
-          <button class="button button_button">Отправить</button>
-        </div>
-      </div>
+      </form>
     </div>
 
     <div class="popup">
