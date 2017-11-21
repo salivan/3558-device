@@ -68,14 +68,215 @@ body {
   color: #000;
   background-color: #fff;
 }
+
 li {
  list-style-type: none;
 }
+
 :link {
   text-decoration: none;
+  color: #000;
 }
 .visually-hidden {
   display: none;
+}
+
+/* Ссылка и кнопка */
+.button {
+  color: #000;
+  text-transform: uppercase;
+  padding: 12px 44px;
+  font: 800 18px "Gilroy", Arial, sans-serif;
+  letter-spacing: 0.2em;
+  position: relative;
+  white-space: nowrap;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.button_button {
+  background: none;
+  border: 0;
+  overflow: visible;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background: #f0c52e;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+
+    will-change: height;
+    transition: height 0.2s;
+}
+
+.button:hover::before,
+.button:focus::before {
+  height: 100%;
+}
+
+.button:active {
+  color: rgba(0, 0, 0, .3);
+}
+
+.button:focus {
+    outline: none;
+}
+
+/* static-text */
+
+.static-text__p {
+  font: 300 15px/2 "Open Sans", Arial, sans-serif;
+}
+.static-text__h3,
+.static-text__h4 {
+  font: 800 47px/1 "Gilroy", Arial, sans-serif;
+  letter-spacing: 0.2em;
+}
+.static-text__table {
+  border: 4px solid black; /* Временно добавлен бордер */
+}
+.static-text__td{
+  font: 300 36px/1 "Gilroy", Arial, sans-serif;
+  text-align:left;
+  /* padding-right: 80px; */
+}
+.static-text__th{
+  font: 300 13px "Open Sans", Arial, sans-serif;
+  text-align: left;
+  padding-top: 20px;
+  /* padding-right: 80px; */
+}
+
+.static-text__li{
+  font: 800 16px "Gilroy", Arial, sans-serif;
+  line-height: 40px;
+}
+
+/* Header */
+.main-header {
+  background-color: #f7e296;
+}
+
+/* search */
+.search__text {
+  background: #fff url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4gIDxwYXRoIGQ9Ik0xNS43IDE0LjNsLTMuMTA0LTMuMTA0QzEzLjQ3MyAxMC4wMjMgMTQgOC41NzYgMTQgN2MwLTMuODY2LTMuMTM0LTctNy03UzAgMy4xMzQgMCA3czMuMTM0IDcgNyA3YzEuNTc2IDAgMy4wMjMtLjUyNyA0LjE5My0xLjQwNEwxNC4zIDE1LjdjLjE4NS4xODQuMzguMy43LjMuNTUzIDAgMS0uNDQ3IDEtMSAwLS4yMTktLjA1NS0uNDU0LS4zLS43ek0yIDdjMC0yLjc2MiAyLjIzOC01IDUtNXM1IDIuMjM4IDUgNS0yLjIzOCA1LTUgNS01LTIuMjM4LTUtNXoiLz48L3N2Zz4=) no-repeat;
+}
+
+.search__button {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.search__text:focus + .search__button,
+.search__button:active {
+  opacity: 1;
+}
+
+/* menu_user */
+.menu__item {
+  display: inline-block; /* Отображать как строчный элемент */
+}
+.menu__link {
+  color:#000;
+}
+a.menu__link > svg {
+  padding-right: 11px;
+}
+
+/* menu-site */
+.menu.menu_main.menu__item {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* Раздел "Каталон товаров". Фон+картинки добавятся через псевдоэлементы в CSS */
+.catalog__group{
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  background-color: #f7e296;
+
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: 1px;
+  line-height: 20px;
+
+  margin-right: 40px;
+}
+a.catalog__link_vr::before {
+  content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2MCIgdmlld0JveD0iMCAwIDE2MCAxNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+ICA8ZyBmaWxsPSIjMzYzNjM2Ij4gICAgPHBhdGggZD0iTTExNi4xMzEgODUuNjM5VjczLjAwM2MwLTEuMzA5IDEuMDQ1LTIuMzcgMi4zMzUtMi4zN2w4LjMyNiAxLjU4MVY2NC4wMmMwLTIuMzU1LTEuNzA4LTMuNDMxLTQuMjAyLTQuMjY1bC0yMy4xODctNi41OGMxLjYxNiAxLjM5MSAxLjg4OSAyLjA0IDEuODg5IDQuMzk2djQ1LjIwOWMwIDIuMzU2LS40NSA0LjA2Ni0xLjk2NyA1LjIxbDIzLjI2NS03LjA2NWMyLjQwMS0uODMzIDQuMjAyLTQuMjE2IDQuMjAyLTYuNTcyVjg2LjQ0bC04LjMyNiAxLjU2N2MtMS4yOS4wMDItMi4zMzUtMS4wNi0yLjMzNS0yLjM2OHoiLz4gICAgPHBhdGggZD0iTTEyNy4xMjkgNzMuOTc5bC03LjU5OC0xLjQ0NGMtMS4wMDggMC0xLjgyNC44MjktMS44MjQgMS44NTF2OS44NjhjMCAxLjAyMy44MTYgMS44NTIgMS44MjQgMS44NTJsNy41OTgtMS40MzFjMS4xNTQtLjQxOSAxLjgyNC0uODI5IDEuODI0LTEuODUyVjc1LjgzYzAtMS4wMjItLjc2Ni0xLjUwNy0xLjgyNC0xLjg1MXpNOTkuMTcgNTcuNDgzYzAtNS4wOC00LjIzMi00LjQ1OS00LjIzMi00LjQ1OXMtNTcuMTA2IDQuNzE0LTYwLjEgNS4xMjFjLTIuOTk0LjQwNy0yLjgzNyA0LjM4Ny0yLjgzNyA0LjM4N1MzMiA5NS4wNjkgMzIgOTguODEyYzAgMy43NDMgMi41OTkgMy43NTMgMi41OTkgMy43NTNsMTYuNDc3IDEuNDAzTDU5LjIxMiA5Mi4zczEuMTA5LTEuODI4IDIuNTA1LTEuODI4YzEuMzk3IDAgMi40MzIgMS44NjEgMi40MzIgMS44NjFsOS4wNjEgMTMuNTIxczE4Ljg5NSAxLjkwOSAyMi41MjEgMS45MDljMy42MjYtLjAwMSAzLjQzOS01LjAyNCAzLjQzOS01LjAyNFY1Ny40ODN6TTQ0Ljk4MiA5MC4xOTJjLTMuNjk4IDAtNi42OTYtNC42MDEtNi42OTYtMTAuMjc1czIuOTk4LTEwLjI3NSA2LjY5Ni0xMC4yNzVjMy42OTggMCA2LjY5NiA0LjYwMSA2LjY5NiAxMC4yNzVzLTIuOTk4IDEwLjI3NS02LjY5NiAxMC4yNzV6bTM2LjE1OCAxLjQyNmMtNC42NjIgMC04LjQ0MS01LjIzOS04LjQ0MS0xMS43MDEgMC02LjQ2MyAzLjc4LTExLjcwMiA4LjQ0MS0xMS43MDIgNC42NjIgMCA4LjQ0MiA1LjIzOSA4LjQ0MiAxMS43MDIgMCA2LjQ2Mi0zLjc4IDExLjcwMS04LjQ0MiAxMS43MDF6Ii8+ICA8L2c+PC9zdmc+);
+}
+.catalog__link{
+  margin-top: 39px;
+}
+
+/* Секция "Сервисы" */
+.services{
+  background-color: #e5e5e5;
+}
+
+/* Секция "Бренды" */
+.brands__item {
+  display: inline-block;
+}
+
+/* Футер */
+.main-footer {
+  background-color: #464646;
+}
+
+.main-footer.menu__link>svg {
+  fill: #f0c52e;
+}
+
+.social__icon {
+  display: inline-block;
+}
+a.url>img {
+  opacity: 0.3;
+}
+a.url>img:hover {
+  opacity: 0.6;
+}
+a.url>img:active {
+  opacity: 0.1;
+}
+
+p.copyright>a:hover{
+  opacity: 0.6;
+}
+
+p.copyright>a:active{
+  opacity: 0.3;
+}
+
+a.menu__link>svg:hover {
+  opacity: 0.6;
+}
+
+a.menu__link>svg:active {
+  opacity: 0.3;
+}
+
+a.logo:hover {
+  opacity: 0.6;
+}
+a.logo:active {
+  opacity: 0.3;
 }
 
 
