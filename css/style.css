@@ -70,6 +70,8 @@ body {
 
 li {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 :link {
@@ -81,6 +83,19 @@ li {
   display: none;
 }
 
+.column {
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Позиционирвание */
+.layout {
+  display: flex;
+  justify-content: space-around;
+}
 
 /* Ссылка и кнопка */
 .button {
@@ -95,18 +110,13 @@ li {
   z-index: 0;
 }
 
-.button_button {
+.button_button,
+.button_link {
   background: none;
   border: 0;
   overflow: visible;
   border-radius: 0;
   -webkit-appearance: none;
-}
-
-.button.button_button:active {
-  color: #f7e184;
-  background-color: #000; /* Нужно поправить состояние в active, сейчас растягивается кнопка, а долден родитель */
-  width: 279px;
 }
 
 .button::before {
@@ -136,11 +146,6 @@ li {
 .button:focus {
   outline: none;
 }
-
-.button_button:active::before {
-  display: none;
-}
-
 
 /* static-text */
 .static-text__p {
@@ -174,9 +179,11 @@ li {
 }
 
 
+
 /* Header */
-.main-header {
-  background-color: #f7e296;
+.header {
+  background: #f7e296;
+  padding-bottom: 150px;
 }
 
 /* search */
@@ -286,20 +293,24 @@ li {
 }
 
 
-/* menu_user */
-.menu__item {
-  display: inline-block;
+/* menu */
+.menu {
+  padding: 0;
+  margin: 0;
+
+  display: flex;
 }
+
 .menu__link {
   color:#000;
+  display: inline-block;
 }
-a.menu__link > svg {
+
+.menu__link > svg {
   padding-right: 11px;
 }
 
-
-/* menu-site */
-.menu__link_high {
+.menu_main > .menu__item > .menu__link {
   font-family: "Gilroy", Arial, sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -308,34 +319,85 @@ a.menu__link > svg {
   letter-spacing: 0.2em;
 }
 
-.menu__link_high:hover,
 .menu__link:hover {
-  opacity: 0.6;
+  color: rgba(0, 0, 0, .6);
 }
 
-.menu__link_high:active,
 .menu__link:active {
-  opacity: 0.3;
+  color: rgba(0, 0, 0, .3);
 }
 
-.menu__link_high:visited{
-  color: #000;
-  opacity: 0.3;
+.menu__item_submenu > .menu__link {
+  position: relative;
+  padding-right: 30px;
 }
+
+.menu__item_submenu > .menu__link::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  opacity: 0.3;
+  background: no-repeat url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4gIDxwYXRoIGZpbGw9IiMyNzI1MjUiIGQ9Ik0xNiA3SDlWMEg3djdIMHYyaDd2N2gyVjloNyIvPjwvc3ZnPg==);
+}
+
+.menu__item_submenu .menu__submenu {
+  display: none;
+  position: absolute;
+  background: #f7e296;
+}
+
+.menu__item_submenu:hover .menu__submenu {
+  display: block;
+}
+
+.menu_user .menu__item:first-child,
+.menu_main .menu__item:first-child {
+  width: 50%;
+}
+
+.menu_user .menu__item:last-child,
+.menu_main .menu__item:last-child {
+  margin-right: 5%;
+}
+
+.menu_main .menu__item:last-child {
+  min-width: 19%;
+  text-align: right;
+}
+
+/* Раздел "Промо-блок" */
 
 
 /* Раздел "Каталон товаров" */
+.catalog__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .catalog__group {
-  display: inline-block;
-  font-family: 15px/1 800 "Gilroy", Arial, sans-serif;
+  font: 800 15px/1 "Gilroy", Arial, sans-serif;
   line-height: 20px;
-  margin-right: 40px;
+
+  margin: 0 10px;
+}
+
+.catalog__group:first-child {
+  margin-left: 0;
+}
+
+.catalog__group:last-child {
+  margin-right: 0;
 }
 
 .catalog__link {
   position: relative;
   display: block;
-  width: 200px;
+  width: 160px;
   color: #000;
 }
 
@@ -343,7 +405,7 @@ a.menu__link > svg {
   display: block;
   content: "";
   width: inherit;
-  height: 200px;
+  height: 160px;
   background: rgba(240, 197, 46, 0.5);
 }
 
@@ -357,7 +419,7 @@ a.menu__link > svg {
   left: 0;
   top: 0;
   width: inherit;
-  height: 200px;
+  height: 160px;
   background: center / 100% 100% no-repeat;
 }
 
@@ -399,10 +461,40 @@ a.menu__link > svg {
   background-color: #e5e5e5;
 }
 
+.services__list {
+  padding: 0;
+  margin: 0;
+
+  width: 30%;
+}
+
+.services__service_current {
+  background: #000;
+}
+
+.services__service .button {
+  display: block;
+  width: 50%;
+  box-sizing: border-box;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.services__service_current .button {
+  pointer-events: none;
+  color: #fff;
+}
+
+.services__service_current .button::before {
+  content: none;
+}
 
 /* Секция "Бренды" */
+.brands__logos {
+  display: flex;
+}
+
 .brands__item {
-  display: inline-block;
   -webkit-filter: grayscale(100%);
      -moz-filter: grayscale(100%);
       -ms-filter: grayscale(100%);
@@ -426,13 +518,22 @@ a.menu__link > svg {
   filter: none; /* IE 6-9 */
 }
 
+ /* Секция "О нас" */
+
+ /* Секция "Контакты" */
+
 
 /* Попапы */
 .popup {
   width: 960px;
   height: 553px;
-  /* background-color: red; */
   position: relative;
+  display: none;
+  margin: auto;
+}
+
+.popup-open {
+  display: block;
 }
 
 /* Кнопка в попах */
@@ -445,6 +546,7 @@ a.menu__link > svg {
   opacity: 0.5;
   background-color: #f0c52e;
   border-radius: 100%;
+  z-index: 3;
 }
 
 .popup__close:hover {
@@ -501,12 +603,22 @@ transform: rotate(-45deg);
   outline-color:#f7e296;
 }
 
-/* Невалидное значение
-.contact-form__input.
-.input__textearea {
+@keyframes shake {
+  0%, 100%                {transform: translate(0);}
+  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+  20%, 40%, 60%, 80%      {transform: translateX(10px);}
+
+}
+.form-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
+}
+
+.contact-form__input:invalid {
    background-color: #f6dada;
 }
-*/
+
+input:invalid { background: red; }
 
 .input__textearea {
   height: 156px;
@@ -515,9 +627,15 @@ transform: rotate(-45deg);
   opacity: 0.5;
 }
 
-/* Попап "Карта"*/
+/* Попап "Карта" */
 .map {
   background-color: #e9e9e9;
+  position: relative
+}
+
+.map__api {
+  position: absolute;
+  z-index: 1;
 }
 
 
@@ -617,6 +735,16 @@ transform: rotate(-45deg);
 
 
 /* Раздел Products на странице catalog.html */
+.products {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 67%;
+
+  padding: 0;
+  margin: 0;
+}
+
 .button_compare {
   text-transform: none;
   font: 300 13px "Open Sana", Arial, sans-serif;
