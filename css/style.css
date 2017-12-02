@@ -183,7 +183,16 @@ li {
 /* Header */
 .header {
   background: #f7e296;
-  padding-bottom: 150px;
+  margin-top: 40px;
+  padding: 0 60px 150px;
+}
+
+.logo {
+  transform: translateY(-50%);
+}
+
+.logo__image {
+  display: block;
 }
 
 /* search */
@@ -297,8 +306,10 @@ li {
 .menu {
   padding: 0;
   margin: 0;
+}
 
-  display: flex;
+.menu__item {
+  white-space: nowrap;
 }
 
 .menu__link {
@@ -306,7 +317,16 @@ li {
   display: inline-block;
 }
 
-.menu__link > svg {
+
+.menu_main {
+  margin-top: 30px;
+}
+
+.menu_user {
+  margin-top: 10px;
+}
+
+.menu_user .menu__link > svg {
   padding-right: 11px;
 }
 
@@ -327,12 +347,20 @@ li {
   color: rgba(0, 0, 0, .3);
 }
 
+.menu__item_submenu  {
+  position: relative;
+}
+
 .menu__item_submenu > .menu__link {
+  display: block;
+}
+
+.menu__item_submenu > .menu__link .menu__link-inner {
   position: relative;
   padding-right: 30px;
 }
 
-.menu__item_submenu > .menu__link::after {
+.menu__item_submenu > .menu__link .menu__link-inner::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -347,25 +375,51 @@ li {
 .menu__item_submenu .menu__submenu {
   display: none;
   position: absolute;
+  width: 110%;
+  justify-content: space-between;
   background: #f7e296;
 }
 
 .menu__item_submenu:hover .menu__submenu {
-  display: block;
+  display: flex;
 }
 
-.menu_user .menu__item:first-child,
-.menu_main .menu__item:first-child {
+.menu__submenu .menu {
+  margin-right: 20px;
+}
+
+.menu_user,
+.menu_main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu_user > .menu__item:first-child,
+.menu_main > .menu__item:first-child {
   width: 50%;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 
-.menu_user .menu__item:last-child,
-.menu_main .menu__item:last-child {
-  margin-right: 5%;
+.menu_user > .menu__item:not(:last-child):not(:first-child),
+.menu_main > .menu__item:not(:last-child):not(:first-child) {
+  margin-right: 35px;
 }
 
-.menu_main .menu__item:last-child {
-  min-width: 19%;
+.menu_main .menu__item {
+  flex-grow: 0.5;
+}
+
+.menu_main > .menu__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.menu_user > .menu__item:nth-child(2) {
+  flex-grow: 1;
+}
+
+.menu_user > .menu__item:last-child {
   text-align: right;
 }
 

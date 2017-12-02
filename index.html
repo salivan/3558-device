@@ -9,116 +9,118 @@
   </head>
 
   <body>
-    <header class="header">
-      <h1 class="visually-hidden">Device</h1>
-      <div class="logo" name="top">
-        <svg class="logo__image" xmlns="http://www.w3.org/2000/svg" width="163" height="36">
-          <path fill-rule="evenodd" d="M162.692 27.848v7.392h-21.12V1.64h20.88v7.392h-13.2V14.6h12v7.296h-12v5.952h13.44zm-39.6.576c1.696 0 3.24-.367 4.632-1.104 1.392-.736 2.44-1.744 3.144-3.024l6.624 3.84c-1.44 2.4-3.44 4.296-6 5.688-2.56 1.392-5.36 2.088-8.4 2.088-5.024 0-9.192-1.672-12.504-5.016-3.312-3.343-4.968-7.495-4.968-12.456 0-4.96 1.656-9.112 4.968-12.456 3.312-3.343 7.48-5.016 12.504-5.016 3.008 0 5.792.696 8.352 2.088 2.56 1.392 4.576 3.288 6.048 5.688l-6.624 3.84c-.736-1.312-1.792-2.328-3.168-3.048-1.376-.72-2.912-1.08-4.608-1.08-2.976 0-5.352.912-7.128 2.736-1.776 1.824-2.664 4.241-2.664 7.248 0 3.008.888 5.424 2.664 7.248 1.776 1.824 4.152 2.736 7.128 2.736zM93.141 1.64h7.68v33.6h-7.68V1.64zm-24.096 33.6L58.101 1.64h8.4l7.44 24.72 7.44-24.72h8.4l-10.944 33.6h-9.792zM35.061 1.64h20.88v7.392h-13.2V14.6h12v7.296h-12v5.952h13.44v7.392h-21.12V1.64zm-21.119 33.6H.502V1.64h13.44c4.639 0 8.52 1.608 11.64 4.824 3.12 3.216 4.68 7.208 4.68 11.976 0 4.769-1.56 8.76-4.68 11.976-3.12 3.216-7.001 4.824-11.64 4.824zm6.456-23.64c-1.649-1.711-3.801-2.568-6.456-2.568h-5.76v18.816h5.76c2.655 0 4.807-.856 6.456-2.568 1.647-1.711 2.472-3.991 2.472-6.84 0-2.848-.825-5.128-2.472-6.84z"
-          />
-        </svg>
-      </div>
-      <nav class="navigation">
-        <ul class="menu menu_user">
-          <li class="menu__item">
-            <form class="search" action="#">
-              <input class="search__text" type="text" placeholder="Поиск по сайту"
-              ><button class="search__button" type="submit">
-                Найти
-              </button>
-            </form>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link menu__link_login" href="login.html">
-              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
-                <path d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543 1.008-.611 1.687-1.707 1.687-2.972C9.985 1.561 8.425 0 6.5 0S3.015 1.561 3.015 3.485c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"
-                />
-              </svg>
-              Войти
-            </a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="compare.html">
-              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
-                <path d="M8 2h1.984v8H8zM0 3h1.984v7H0zm4-3h2v10H4z" />
-              </svg>
-              Сравнить
-            </a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="checkout.html">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
-                <path d="M11.864 3.017c-.082-.098-.203-.154-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.91V4.09c0 .563-.486 1.022-1.08 1.022-.596 0-1.08-.458-1.08-1.022V2.863H.44c-.125 0-.243.056-.327.154-.082.098-.122.228-.107.358L.78 10.51c.014.805.64 1.454 1.41 1.454h7.595c.77 0 1.396-.65 1.41-1.455l.777-7.136c.015-.13-.026-.26-.108-.358z"
-                />
-                <path d="M3.83 4.5c.238 0 .432-.185.432-.41V1.84c0-.632.672-1.022 1.295-1.022h1.08c.654 0 1.077.4 1.077 1.022v2.25c0 .225.194.41.43.41.24 0 .434-.185.434-.41V1.84C8.578.773 7.76 0 6.636 0h-1.08C4.366 0 3.4.826 3.4 1.84v2.25c0 .225.194.41.43.41z"
-                />
-              </svg>
-              Корзина
-            </a>
-          </li>
-        </ul>
+    <div class="column">
+      <header class="header">
+        <h1 class="visually-hidden">Device</h1>
+        <div class="logo">
+          <svg class="logo__image" xmlns="http://www.w3.org/2000/svg" width="163" height="36">
+            <path fill-rule="evenodd" d="M162.692 27.848v7.392h-21.12V1.64h20.88v7.392h-13.2V14.6h12v7.296h-12v5.952h13.44zm-39.6.576c1.696 0 3.24-.367 4.632-1.104 1.392-.736 2.44-1.744 3.144-3.024l6.624 3.84c-1.44 2.4-3.44 4.296-6 5.688-2.56 1.392-5.36 2.088-8.4 2.088-5.024 0-9.192-1.672-12.504-5.016-3.312-3.343-4.968-7.495-4.968-12.456 0-4.96 1.656-9.112 4.968-12.456 3.312-3.343 7.48-5.016 12.504-5.016 3.008 0 5.792.696 8.352 2.088 2.56 1.392 4.576 3.288 6.048 5.688l-6.624 3.84c-.736-1.312-1.792-2.328-3.168-3.048-1.376-.72-2.912-1.08-4.608-1.08-2.976 0-5.352.912-7.128 2.736-1.776 1.824-2.664 4.241-2.664 7.248 0 3.008.888 5.424 2.664 7.248 1.776 1.824 4.152 2.736 7.128 2.736zM93.141 1.64h7.68v33.6h-7.68V1.64zm-24.096 33.6L58.101 1.64h8.4l7.44 24.72 7.44-24.72h8.4l-10.944 33.6h-9.792zM35.061 1.64h20.88v7.392h-13.2V14.6h12v7.296h-12v5.952h13.44v7.392h-21.12V1.64zm-21.119 33.6H.502V1.64h13.44c4.639 0 8.52 1.608 11.64 4.824 3.12 3.216 4.68 7.208 4.68 11.976 0 4.769-1.56 8.76-4.68 11.976-3.12 3.216-7.001 4.824-11.64 4.824zm6.456-23.64c-1.649-1.711-3.801-2.568-6.456-2.568h-5.76v18.816h5.76c2.655 0 4.807-.856 6.456-2.568 1.647-1.711 2.472-3.991 2.472-6.84 0-2.848-.825-5.128-2.472-6.84z"
+            />
+          </svg>
+        </div>
+        <nav class="navigation">
+          <ul class="menu menu_user">
+            <li class="menu__item">
+              <form class="search" action="#">
+                <input class="search__text" type="text" placeholder="Поиск по сайту"
+                ><button class="search__button" type="submit">
+                  Найти
+                </button>
+              </form>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link menu__link_login" href="login.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
+                  <path d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543 1.008-.611 1.687-1.707 1.687-2.972C9.985 1.561 8.425 0 6.5 0S3.015 1.561 3.015 3.485c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"
+                  />
+                </svg>
+                Войти
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="compare.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                  <path d="M8 2h1.984v8H8zM0 3h1.984v7H0zm4-3h2v10H4z" />
+                </svg>
+                Сравнить
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="checkout.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                  <path d="M11.864 3.017c-.082-.098-.203-.154-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.91V4.09c0 .563-.486 1.022-1.08 1.022-.596 0-1.08-.458-1.08-1.022V2.863H.44c-.125 0-.243.056-.327.154-.082.098-.122.228-.107.358L.78 10.51c.014.805.64 1.454 1.41 1.454h7.595c.77 0 1.396-.65 1.41-1.455l.777-7.136c.015-.13-.026-.26-.108-.358z"
+                  />
+                  <path d="M3.83 4.5c.238 0 .432-.185.432-.41V1.84c0-.632.672-1.022 1.295-1.022h1.08c.654 0 1.077.4 1.077 1.022v2.25c0 .225.194.41.43.41.24 0 .434-.185.434-.41V1.84C8.578.773 7.76 0 6.636 0h-1.08C4.366 0 3.4.826 3.4 1.84v2.25c0 .225.194.41.43.41z"
+                  />
+                </svg>
+                Корзина
+              </a>
+            </li>
+          </ul>
 
-        <ul class="menu menu_main">
-          <li class="menu__item menu__item_submenu">
-            <a class="menu__link" href="catalog.html">
-              Каталог товаров
-            </a>
-            <div class="menu__submenu">
-              <ul class="menu">
-                <li class="menu__item">
-                  <a href="vr.html" class="menu__link">
-                    Виртуальная реальность
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a href="monopods.html" class="menu__link">
-                    Моноподы для селфи
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a href="cameras.html" class="menu__link">
-                    Экшн-камеры
-                  </a>
-                </li>
-              </ul>
-              <ul class="menu">
-                <li class="menu__item">
-                  <a href="fitness.html" class="menu__link">
-                    Фитнес-браслеты
-                  </a>
-                </li>
-                <li class="menu__item">
-                  <a href="smart-watches.html" class="menu__link">
-                    Умные часы
-                  </a>
-                </li>
-              </ul>
-              <ul class="menu">
-                <li class="menu__item">
-                  <a href="copters.html" class="menu__link">
-                    Квадрокоптеры
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="delivery.html">
-              Доставка
-            </a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="guarantee.html">
-              Гарантия
-            </a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="contacts.html">
-              Контакты
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+          <ul class="menu menu_main">
+            <li class="menu__item menu__item_submenu">
+              <a class="menu__link" href="catalog.html">
+                <span class="menu__link-inner">Каталог товаров</span>
+              </a>
+              <div class="menu__submenu">
+                <ul class="menu">
+                  <li class="menu__item">
+                    <a href="vr.html" class="menu__link">
+                      Виртуальная реальность
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="monopods.html" class="menu__link">
+                      Моноподы для селфи
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="cameras.html" class="menu__link">
+                      Экшн-камеры
+                    </a>
+                  </li>
+                </ul>
+                <ul class="menu">
+                  <li class="menu__item">
+                    <a href="fitness.html" class="menu__link">
+                      Фитнес-браслеты
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="smart-watches.html" class="menu__link">
+                      Умные часы
+                    </a>
+                  </li>
+                </ul>
+                <ul class="menu">
+                  <li class="menu__item">
+                    <a href="copters.html" class="menu__link">
+                      Квадрокоптеры
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="delivery.html">
+                Доставка
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="guarantee.html">
+                Гарантия
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="contacts.html">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
 
     <main>
       <!--Раздел "Промо-блок"-->
