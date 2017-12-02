@@ -579,11 +579,16 @@ li {
 
 /* Попапы */
 .popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
   width: 960px;
-  height: 553px;
-  position: relative;
+  height: 559px;
+  margin: -279.5px 0 0 -480px;
   display: none;
-  margin: auto;
+
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .popup-open {
@@ -690,6 +695,10 @@ input:invalid { background: red; }
 .map__api {
   position: absolute;
   z-index: 1;
+}
+
+.map__static {
+  display: block;
 }
 
 
