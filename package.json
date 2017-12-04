@@ -1,0 +1,25 @@
+{
+  "name": "3558-device",
+  "version": "1.0.0",
+  "description": "HTML Academy course assignment",
+  "main": "index.html",
+  "scripts": {
+    "build": "PRODUCTION=1 gulp",
+    "watch": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salivan/3558-device.git"
+  },
+  "author": "Kate Pozdnysheva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/salivan/3558-device/issues"
+  },
+  "homepage": "https://github.com/salivan/3558-device#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat-css": "^2.3.0"
+  }
+}
