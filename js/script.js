@@ -60,3 +60,5 @@ servicesList.addEventListener('click', function (e) {
   currentService.classList.remove(currentServiceClassName);
   currentService = menuItem;
 });
+
+
