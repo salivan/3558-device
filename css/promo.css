@@ -1,0 +1,75 @@
+.promo {
+  position: relative;
+  max-width: 1080px;
+  padding: 0;
+  margin-top: -110px;
+
+  background: green;
+
+  counter-reset: promo;
+}
+
+.promo__page.layout {
+  display: none;
+}
+
+.promo__page {
+    position: relative;
+}
+
+.promo__page:after {
+  counter-increment: promo;
+  content: "0" counter(promo);
+
+  font: 800 178px/1 Gilroy, Arial, sans-serif;
+  position: absolute;
+  right: 0;
+  top: -16px;
+
+  color: #fff;
+}
+
+.promo_show_selfie .promo__page_selfie.layout,
+.promo_show_fitness .promo__page_fitness.layout,
+.promo_show_copters .promo__page_copters.layout {
+  display: flex;
+}
+
+.promo__radio-group {
+  position: absolute;
+  right: 50px;
+  bottom: 180px;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.promo__title {
+  position: relative;
+  width: 75%;
+  padding-top: 50px;
+  margin: 35px 0 0 0;
+  letter-spacing: 0;
+}
+
+.promo__title:before {
+  content: "";
+  position: absolute;
+  top: 0;
+
+  width: 100px;
+  height: 7px;
+  background: #fff;
+}
+
+.promo__table {
+  position: absolute;
+  bottom: 0;
+  width: auto;
+}
+
+.promo__more {
+  display: inline-block;
+  margin-top: 20px;
+}
+
