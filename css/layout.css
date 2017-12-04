@@ -1,0 +1,17 @@
+.layout {
+  display: flex;
+}
+
+.layout_2col .layout__col {
+  width: 50%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.layout__col:first-child {
+  padding-left: 0;
+}
+
+.layout__col:last-child {
+  padding-right: 0;
+}

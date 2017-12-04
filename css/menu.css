@@ -24,6 +24,14 @@
   letter-spacing: 0.2em;
 }
 
+.menu__link:not(:only-child):not(:last-child) {
+  margin-right: 10px;
+}
+
+.menu__link_secondary {
+  opacity: 0.6;
+}
+
 .menu__link:hover {
   color: rgba(0, 0, 0, .6);
 }
